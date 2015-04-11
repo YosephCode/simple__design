@@ -1,0 +1,21 @@
+{
+  "name": "simple_design",
+  "version": "0.0.0",
+  "authors": [
+    "Yoseph Santos <yosephcsantos@gmail.com>"
+  ],
+  "description": "this is a simple design with an AngularJs",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15",
+    "jquery": "~2.1.3",
+    "polymer": "Polymer/polymer#^0.5"
+  }
+}
