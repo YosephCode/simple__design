@@ -1,12 +1,15 @@
 module.exports = function(grunt){
 	grunt.initConfig({
-		  sass: {
-		    dist: {
-		      files: {
-		        'css/main.css': 'scss/main.scss'
-		      }
-		    }
-		  },
+		  less: {
+	            development: {
+	                options: {
+	                    paths: ["less"]
+	                },
+	                files: {
+	                    "css/main.css": "less/*.less"
+	                }
+	            }
+	        },
 		  cssmin: {
             options: {
                 shorthandCompacting: false,
@@ -19,9 +22,9 @@ module.exports = function(grunt){
             }
 	      },
 	      watch: {
-            sass: {
-                files: ['scss/*.scss'],
-                tasks: ['sass']
+            less: {
+                files: ['less/*.less'],
+                tasks: ['less']
             },
             css: {
                 files: ['css/main.css'],
@@ -29,8 +32,8 @@ module.exports = function(grunt){
             }
           }
 	});
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default', ['sass', 'watch']);
+	grunt.registerTask('default', ['watch']);
 }
